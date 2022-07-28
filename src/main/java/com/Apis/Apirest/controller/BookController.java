@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/books")
+@RequestMapping("/api")
 public class BookController {
 
     private final BookRepository bookRep;
@@ -24,4 +24,6 @@ public class BookController {
                 .map(BookRs::converter)            //Converte books Rs para b (BookRs.converter(b))
                 .collect(Collectors.toList());     // coleta a conversao e forma uma lista
     }
+
+
 }
